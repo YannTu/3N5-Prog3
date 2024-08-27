@@ -1,10 +1,10 @@
 package org.tupayachi
 
-fun main(args: Array<Char>) {
-    var a: String = "*"
-    var hauteur: Int = args[0].code
-    for (i: Int in 0..3) {
-        print(a)
-        a += "*"
+fun main(args: Array<String>) {
+    for (i in 1..args[0].toInt()) {
+        for (e in 1..i) {
+            print("*")
+        }
+        println()
     }
 }
