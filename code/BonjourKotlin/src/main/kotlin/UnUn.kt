@@ -1,11 +1,28 @@
 package org.tupayachi
 
+import java.lang.StringBuilder
+
 fun main() {
-    println("111213")
-    println(unUn("111213"))
+    val input = "334446121"
+    println(input)
+    println(unUn(input))
 }
 
 fun unUn(source: String): String{
-    return source
+    if (source.isEmpty()) return ""
+    val sourcefinal = StringBuilder()
+    var count = 1
+    var currentChar = source[0]
+    for (i in 1 until source.length) {
+        if (source[i] == currentChar) {
+            count++
+        } else {
+            sourcefinal.append(count).append(currentChar)
+            currentChar = source[i]
+            count = 1
+        }
+    }
+    sourcefinal.append(count).append(currentChar)
+    return sourcefinal.toString()
 }
 
