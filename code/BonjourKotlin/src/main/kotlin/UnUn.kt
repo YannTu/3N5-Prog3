@@ -1,7 +1,5 @@
 package org.tupayachi
 
-import java.lang.StringBuilder
-
 fun main() {
     val input = "334446121"
     println(input)
@@ -10,19 +8,19 @@ fun main() {
 
 fun unUn(source: String): String{
     if (source.isEmpty()) return ""
-    val sourcefinal = StringBuilder()
+    var sourcefinal = ""
     var count = 1
     var currentChar = source[0]
     for (i in 1 until source.length) {
         if (source[i] == currentChar) {
             count++
         } else {
-            sourcefinal.append(count).append(currentChar)
+            sourcefinal += "$count$currentChar"
             currentChar = source[i]
             count = 1
         }
     }
-    sourcefinal.append(count).append(currentChar)
-    return sourcefinal.toString()
+    sourcefinal += "$count$currentChar"
+    return sourcefinal
 }
 
