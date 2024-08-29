@@ -1,0 +1,1 @@
+val permet de créer une variable dont la valeur et le type de la valeur ne peuvent pas être changer par la suite par contre, var permet justement de créer une variable dont la valeur et le type de celle-ci peuvent être modifier par la suite.
