@@ -6,15 +6,16 @@ fun main(args: Array<String>) {
         println("Entrer un ou des entiers")
         return
     }
-    for (i: Int in 0..args.size) {
-        val liste: List<Int> = repete(args[i].toInt(), args[i].toInt() + 2)
-        println(liste)
-    }
+    val liste = repete(args[0].toInt(), args[1].toInt())
+    println(liste)
 }
 
-fun repete(n: Int, nombreFois: Int) {
-    var list: List<Int>
+fun repete(n: Int, nombreFois: Int): MutableList<Int> {
+    val listeRetourne: MutableList<Int> = mutableListOf()
     for (i: Int in 1 .. n) {
-        list.
+        repeat(nombreFois) {
+            listeRetourne.add(i)
+        }
     }
+    return listeRetourne
 }
