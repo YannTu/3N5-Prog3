@@ -28,13 +28,13 @@ hide_table_of_contents: true
 ## En cours avec le prof (démos)
 
 1. Utilisation du script d'installation
-2. Ouvrir l'IDE pour Kotlin (Intellij IDEA)
-3. Premier projet, première classe Kotlin
-4. Point d'arrêt et débogueur
-5. Configuration d'exécution et .idea
-6. Ajouter une librairie avec gradle
-7. Définir une fonction en Kotlin
-8. Créer un fork du repo du cours privé pour mettre vos exercices 3N5-NomDeFamille-Prenom
+2. Créer un repo GitHub privé 3N5-NomDeFamille-Prenom pour mettre vos exercices
+3. Ouvrir l'IDE pour Kotlin (Intellij IDEA)
+4. Premier projet, première classe Kotlin
+5. Point d'arrêt et débogueur
+6. Configuration d'exécution et .idea
+7. Ajouter une librairie avec gradle
+8. Définir une fonction en Kotlin
 
 </Column>
 
@@ -42,21 +42,17 @@ hide_table_of_contents: true
 
 <Row>
 
-
 <Column>
 
 :::tip Contenu pour cette semaine
 
 Video de création d'un projet, avec point d'arrêt et arguments
 
-<!-- <Video url="https://youtu.be/dMN2_NlYBpU"/> -->
 <Video url="https://youtu.be/uiPQ1FFjla8"/>
 
 [Recette](../03-recettes/ajout-librairie.mdx) pour ajouter une librairie Java dans un projet Kotlin en gradle.
 
 :::
-
-
 
 </Column>
 
@@ -78,9 +74,9 @@ Video de création d'un projet, avec point d'arrêt et arguments
 
 ### Exercice Bonjour Kotlin
 
-Tu dois créer un projet Kotlin nommé **BonjourKotlin** au format (*Build system*) gradle dont le nom de package de base (*GroupId*) est **org.nomdefamille** en changeant le nom de famille pour le tien.
+Tu dois créer un projet Kotlin nommé **BonjourKotlin** au format (_Build system_) gradle dont le nom de package de base (_GroupId_) est **org.nomdefamille** en changeant le nom de famille pour le tien.
 
-Crée 2 fichiers Kotlin exécutables (avec un *main* qui suit la convention Kotlin).\
+Crée 2 fichiers Kotlin exécutables (avec un _main_ qui suit la convention Kotlin).\
 Le premier s'appelle **NomDeFamille.kt** et affiche "Bonjour [Nom de famille]" à l'exécution.\
 Le deuxième s'appelle **PrenomDuProf.kt** et affiche "Salut [Prénom du prof]" à l'exécution.
 
@@ -142,15 +138,20 @@ N'OUBLIE PAS DE FAIRE UN COMMIT DANS TON REPO AVEC L'EXERCICE PUIS DE FAIRE UN P
 ### Exercice Triangles
 
 Dans un fichier exécutable **Triangles.kt**, tu dois produire 5 triangles de suite en utilisant une fonction Kotlin qui:
+
 - prend la hauteur en paramètre
-- renvoie une **String** avec le triangle
+- renvoie une **String** qui contient le triangle
+
+- **Indice** : Part de l'exercice précédent
+- **Indice 2** : Puisque le triangle devrait se retrouver dans la String qui est retournée par la fonction, il ne devrait y avoir aucuns `print` dans la fonction.
 
 ```kotlin
 fun triangle(hauteur : Int) : String {
     return "TODO"
 }
 ```
-Utilise des appels à cette fonction dans le main pour afficher 5 triangles de suite de taille 4, 8, 10 et 100.
+
+Utilise des appels à cette fonction dans le main pour afficher 5 triangles de suite. Fait des tests avec des triangles de taille 4, 8, 10 et 100.
 
 N'OUBLIE PAS DE FAIRE UN COMMIT DANS TON REPO AVEC L'EXERCICE PUIS DE FAIRE UN PUSH.
 
@@ -169,6 +170,7 @@ fun main() {
     }
 }
 ```
+
 Dans un fichier appelé **TraceManuelle.md**, tu dois écrire à quoi va ressembler la
 console à la fin de l'exécution de ce code (sans le rouler).
 
@@ -177,6 +179,7 @@ Finalement, écris ce que vaut **`b / k.length`** à chaque itération.
 ### Exercice TraceDebugger
 
 Refaire le même exercice que précédemment, mais en roulant le code et en utilisant le débogueur. Tu dois :
+
 - placer un point d'arrêt
 - évaluer une expression sur un point d'arrêt pour savoir combien vaut **`b / k.length`** à chaque itération
 
@@ -184,13 +187,15 @@ Valide que les valeurs que tu trouves sont les mêmes que celles que tu as écri
 
 ### Exercice librairie JSOUP
 
-Tu dois créer un projet Kotlin au format (*Build system*) gradle dont le nom est **DemoJSoup**.
+Tu dois créer un projet Kotlin au format (_Build system_) gradle dont le nom est **DemoJSoup**.
 
-Tu dois inclure JSoup dans les dépendances de ton projet dans le build.gradle (*indice : regarde la page **Recettes** du site)*.
+Tu dois inclure JSoup dans les dépendances de ton projet dans le build.gradle (_indice : regarde la **[Recette](../03-recettes/ajout-librairie.mdx)**
+pour savoir comment faire)_.
 
-Tu dois créer un fichier exécutable appelé **SuperDuperDemo.kt**. 
+Tu dois créer un fichier exécutable appelé **SuperDuperDemo.kt**.
 
 Dans le main, copie un des exemples que tu trouves sur la page de JSOUP [https://jsoup.org/](https://jsoup.org/):
+
 - les exemples sont en Java
 - tu peux essayer de les traduire en Kotlin
 - tu peux demander à ChatGPT de traduire l'exemple en Kotlin
