@@ -2,10 +2,10 @@ package jsoup
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import org.jsoup.nodes.Element
 
 fun main() {
     // Tu peux tester la fonction en l'appelant ici.
+    jsoup(listOf("Comment", "est", "votre", "blanquette ?"))
 }
 
 /**
@@ -39,5 +39,11 @@ fun main() {
  * </body>
  */
 fun jsoup(mots: List<String>): Document? {
-    return null
+    val pageWeb: Document = Jsoup.connect("https://info.cegepmontpetit.ca/3N5-Prog3/intraA24-2.html").get()
+    for (mot in mots) {
+        val html = "<div>$mot</div>"
+        pageWeb.body().append(html)
+    }
+    println(pageWeb)
+    return pageWeb
 }

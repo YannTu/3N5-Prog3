@@ -2,15 +2,17 @@ package fichier
 
 import java.io.File
 
-fun main() {
+fun main(args: Array<String>) {
     // Tu peux tester tes fonctions en les appellants ici.
+    lire()
+    println(ecrire(args))
 }
 
 /**
  * (1 point) Affiche dans la console le contenu du fichier message.txt qui se trouve dans le projet de départ.
  */
 fun lire() {
-
+    println(File("message.txt").readText())
 }
 
 /**
@@ -22,5 +24,12 @@ fun lire() {
  * Si tout s'est bien passé, on retourne la valeur 1.
  */
 fun ecrire(args: Array<String>): Int {
+    if (args.size != 2) {
+        println("Veuillez mettre 2 éléments dans le paramètre args.")
+        return -1
+    }
+    val fichier : File = File(args[0])
+    fichier.createNewFile()
+    fichier.writeText(args[1])
     return 1
 }
