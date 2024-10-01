@@ -7,6 +7,10 @@ android {
     namespace = "ca.cem.tapelelapin"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "ca.cem.tapelelapin"
         minSdk = 24
