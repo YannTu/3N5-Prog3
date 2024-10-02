@@ -3,6 +3,7 @@ package ca.cem.tapelelapin
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvTops.setOnClickListener(View.OnClickListener{
             println("Coucou")
-            binding.tvTops.setText("Lapin")
+            binding.tvTops.setText("LAPIN")
         })
         listeBoutons = listOf(
             binding.btn1,
@@ -49,23 +50,24 @@ class MainActivity : AppCompatActivity() {
 
     fun initialiser() {
         for (btn in listeBoutons) {
-            btn.setText("Taupe")
+            btn.setText("TAUPE")
         }
         val boutonLapin : Button = listeBoutons.random()
-        boutonLapin.setText("Lapin")
+        boutonLapin.setText("LAPIN")
     }
 
     fun reagirAuClic(it: View, btn: Button) {
         val boutonClique : Button = it as Button
-        if (boutonClique.text == "Lapin") {
-            boutonClique.setText("Taupe")
+        if (boutonClique.text == "LAPIN") {
+            boutonClique.setText("TAUPE")
+            Toast.makeText(this, "POOF", Toast.LENGTH_SHORT).show()
             initialiser()
             scoreTops++
         } else {
             scoreFlops++
         }
-        binding.tvTops.setText("Tops: $scoreTops")
-        binding.tvFlops.setText("Tops: $scoreFlops")
+        binding.tvTops.setText("$scoreTops pafs")
+        binding.tvFlops.setText("$scoreFlops flops")
 
     }
 }
