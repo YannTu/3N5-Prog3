@@ -16,10 +16,12 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var binding : ActivityMain2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        title = "Article"
+        val numéro = intent.getIntExtra("numéro", 0)
+        title = "Article #${numéro}"
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater)
         val view = binding.root
+
         setContentView(view)
 
         val bouton1Clique : Button = binding.btnContact2 as Button

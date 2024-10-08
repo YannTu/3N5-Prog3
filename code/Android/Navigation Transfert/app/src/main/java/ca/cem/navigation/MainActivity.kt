@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         val bouton1Clique : Button = binding.btnArticle1 as Button
         bouton1Clique.setOnClickListener {
-            startActivity(Intent(this, MainActivity2::class.java))
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("numéro", binding.picker.value)
+            startActivity(intent)
         }
 
         val bouton2Clique : Button = binding.btnContact1 as Button
