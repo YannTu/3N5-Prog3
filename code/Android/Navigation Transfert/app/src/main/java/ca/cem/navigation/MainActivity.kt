@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
+        if (intent.getStringExtra("Nom") != "") {
+            val nom = intent.getStringExtra("Nom")
+            binding.bonjour.text = "Bonjour $nom"
+        }
         setContentView(view)
 
         val bouton1Clique : Button = binding.btnArticle1 as Button

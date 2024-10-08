@@ -23,7 +23,9 @@ class MainActivity3 : AppCompatActivity() {
 
         val bouton1Clique : Button = binding.btnAccueil3 as Button
         bouton1Clique.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("Nom", binding.contactInputEditText.text.toString())
+            startActivity(Intent(intent))
         }
     }
 }
