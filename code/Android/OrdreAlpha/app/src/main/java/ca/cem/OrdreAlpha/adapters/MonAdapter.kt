@@ -1,4 +1,4 @@
-package ca.cem.AlbumsFavoris.adapters
+package ca.cem.OrdreAlpha.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ca.cem.AlbumsFavoris.MainActivity
-import ca.cem.AlbumsFavoris.databinding.MonItemBinding
+import ca.cem.OrdreAlpha.MainActivity
+import ca.cem.OrdreAlpha.databinding.MonItemBinding
 
 class MonAdapter(private val activity: MainActivity) : ListAdapter<String, MonAdapter.MonItemViewHolder>(MonItemDiffCallback) {
     inner class MonItemViewHolder(private val binding: MonItemBinding) : RecyclerView.ViewHolder(binding.root) {

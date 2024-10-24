@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ca.cem.OrdreAlpha"
+    namespace = "ca.cem.duplicata"
     compileSdk = 34
 
     buildFeatures {
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "ca.cem.OrdreAlpha"
+        applicationId = "ca.cem.duplicata"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

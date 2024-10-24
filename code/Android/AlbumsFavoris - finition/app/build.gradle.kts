@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ca.cem.OrdreAlpha"
+    namespace = "ca.cem.AlbumsFavoris"
     compileSdk = 34
 
     buildFeatures {
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "ca.cem.OrdreAlpha"
+        applicationId = "ca.cem.AlbumsFavoris"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("com.squareup.picasso:picasso:2.8")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
