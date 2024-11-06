@@ -6,18 +6,6 @@ hide_table_of_contents: true
 
 # Pile d'appels et exceptions
 
-## Contenu
-
-Video à faire:
-- pile d'appels dans le débogueur
-- ce qui se passe quand on lance une exception
-- dans la pile d'appels, on peut laisser passer ou attraper
-- syntaxe en kotlin
-- si personne n'attrape, l'application crash, et on voit une trace (trace) de pile (stack) d'appels communément appeleé 
-**stacktrace** 
-- dans une application, on devrait avoir une fonction qui attrape. Si ce n'est pas le cas, faire un gros try catch dans le main
-- dans une librairie, ce n'est pas le cas, on peut lancer des exceptions au programmeur de l'appli pour qu'il réagisse au problème
-
 <Row>
 
 <Column>
@@ -31,6 +19,10 @@ Video à faire:
 
 [Code après la vidéo](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/VideoExceptions)
 
+<Video url="https://youtu.be/M1WfpIARfQo" />
+
+[Code après la vidéo](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/VideoPile)
+
 :::
 
 </Column>
@@ -39,7 +31,7 @@ Video à faire:
 
 :::info À faire pendant la séance
 
-- Présentation du **[deuxièeme travail](../tp/tp2)**.
+- Présentation du **[troisième travail](../tp/tp3)**.
 - Compléter les exercices de la semaine.
 
 :::
@@ -124,7 +116,7 @@ fun main() {
 fun lireFichier(){
 	// Code qui lit un fichier...
     // highlight-next-line
-	// Question : Catch on laisse l'erreur se propager?
+	// Question : Catch ou laisse l'erreur se propager?
 }
 ```
 
@@ -140,9 +132,9 @@ fun uneFonction(){
 }
 
 public void etape3(){
-	//Code qui génère une exception
+	// Code qui génère une exception
     // highlight-next-line
-	// Question : Catch on laisse l'erreur se propager?
+	// Question : Catch ou laisse l'erreur se propager?
 }
 ```
 
