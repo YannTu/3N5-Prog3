@@ -1,0 +1,1 @@
+Non, car la première méthode va attraper l'exception pour tous les fichiers qui n'existe pas, car la boucle ne sera pas arrêtée tandis que la deuxième méthode va arrêter la boucle dès qu'il va attraper une exception.
