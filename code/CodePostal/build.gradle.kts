@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-
+    implementation("commons-validator:commons-validator:1.9.0")
 }
 
 tasks.test {
